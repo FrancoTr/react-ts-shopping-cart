@@ -1,3 +1,5 @@
+import { Card } from "react-bootstrap";
+
 type StoreItemProps = {
   id: number;
   name: string;
@@ -6,5 +8,9 @@ type StoreItemProps = {
 };
 
 export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
-  return <h1>Store Item</h1>;
+  return (
+    <Card>
+      <Card.Img variant='top' src={imgUrl} height='200px' style={{ objectFit: "cover" }} />
+    </Card>
+  );
 }
